@@ -796,7 +796,7 @@ extension MainWindowController: NSToolbarDelegate {
 
 		case .sidebarToggle:
 			let title = NSLocalizedString("Toggle Sidebar", comment: "Toggle Sidebar")
-			return buildToolbarButton(.toggleSidebar, title, AppAsset.toolbarSidebarToggleImage, "toggleTheSidebar:")
+			return buildToolbarButton(.sidebarToggle, title, AppAsset.toolbarSidebarToggleImage, "toggleTheSidebar:")
 
 		case .refresh:
 			let title = NSLocalizedString("Refresh", comment: "Refresh")
@@ -902,6 +902,7 @@ extension MainWindowController: NSToolbarDelegate {
 
 	func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
 		[
+			.sidebarToggle,
 			.flexibleSpace,
 			.refresh,
 			.newSidebarItemMenu,
